@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Ticket
+
+# Model Form Field configuration
+form: $/mohsin/helpdesk/models/ticket/fields.yaml
+
+# Model Class name
+modelClass: Mohsin\Helpdesk\Models\Ticket
+
+# Default redirect location
+defaultRedirect: mohsin/helpdesk/ticket
+
+# Create page
+create:
+    title: Create Ticket
+    redirect: mohsin/helpdesk/ticket/update/:id
+    redirectClose: mohsin/helpdesk/ticket
+
+# Update page
+update:
+    title: Edit Ticket
+    redirect: mohsin/helpdesk/ticket
+    redirectClose: mohsin/helpdesk/ticket
+
+# Preview page
+preview:
+    title: Preview Ticket

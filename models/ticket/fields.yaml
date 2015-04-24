@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    user:
+        label: Name
+        commentAbove: The name of the user who made the ticket request
+        type: relation
+
+    status:
+        label: Status
+        type: dropdown
+
+    subject:
+        label: Subject
+
+    notes:
+      label: Notes
+      type: textarea
+      size: medium

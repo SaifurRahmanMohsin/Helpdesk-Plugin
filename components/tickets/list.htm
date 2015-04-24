@@ -1,0 +1,22 @@
+{% if tickets|length > 0 %}
+<thead>
+  <th>Ticket ID</th>
+  <th>Subject</th>
+  <th>Created On</th>
+  <th>Last Update</th>
+  <th>Status</th>
+</thead>
+<tbody>
+  {% for ticket in tickets %}
+    <tr>
+      <th>{{ ticket.id }}</th>
+      <td>{{ ticket.subject }}</td>
+      <td>{{ ticket.created_at|date('l, d M Y H:i:s') }}</td>
+      <td>{{ ticket.updated_at|date('l, d M Y H:i:s') }}</td>
+      <td>{{ ticket.status|st }}</td>
+    <tr>
+  {% endfor %}
+</tbody>
+{% else %}
+<p>You have not created any tickets so far.</p>
+{% endif %}
